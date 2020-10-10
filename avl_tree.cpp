@@ -81,7 +81,7 @@ private:
 
   static Node *_Delete(Node *node, Node *target) {
     if (!node) return NULL;
-    Node *now = node;
+    auto *now = node;
     if (target->key < node->key) {
       node->left = _Delete(node->left, target);
     } else if (target->key > node->key) {
